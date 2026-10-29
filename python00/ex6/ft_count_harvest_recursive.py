@@ -10,12 +10,12 @@
 #                                                                             #
 # *************************************************************************** #
 
-def rec_harvest(day: int):
+def rec_harvest(day: int) -> None:
     if day > 1:
         rec_harvest(day - 1)
     print(f"Day {day}")
 
 
-def ft_count_harvest_recursive():
+def ft_count_harvest_recursive() -> None:
     rec_harvest(int(input("Days until harvest: ")))
     print("Harvest time!")

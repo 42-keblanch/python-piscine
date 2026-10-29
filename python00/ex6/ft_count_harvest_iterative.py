@@ -10,7 +10,7 @@
 #                                                                             #
 # *************************************************************************** #
 
-def ft_count_harvest_iterative():
+def ft_count_harvest_iterative() -> None:
     days: int = int(input("Days until harvest: "))
     i: int
     for i in range(days):
