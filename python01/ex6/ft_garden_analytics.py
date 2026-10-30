@@ -47,7 +47,7 @@ class Plant:
             if hasattr(self, "_height"):
                 print("Height update rejected")
             else:
-                self._height: float = PLANT_DEFAULT_HEIGHT
+                self._height = PLANT_DEFAULT_HEIGHT
                 print("Plant created with default height of 0")
 
     def get_age(self) -> int:
@@ -61,7 +61,7 @@ class Plant:
             if hasattr(self, "_age"):
                 print("Age update rejected")
             else:
-                self._age: int = PLANT_DEFAULT_AGE
+                self._age = PLANT_DEFAULT_AGE
                 print("Plant created with default age of 0")
 
     def get_stats(self) -> Stats:
