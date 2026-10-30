@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 
 class Plant:
-    name: str
-    height: int
-    age: int
-
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
         self.height = height

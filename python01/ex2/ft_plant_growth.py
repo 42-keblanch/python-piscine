@@ -1,11 +1,6 @@
 #!/usr/bin/env python3
 
 class Plant:
-    _name: str
-    _height: float
-    _age: int
-    _growth_rate: float = .8
-
     def __init__(self, name: str, height: float, age: int,
                  growth_rate: float = .8) -> None:
         self._name = name
@@ -35,7 +30,7 @@ def main() -> None:
     plant_init_size = rose.get_height()
     print("=== Garden Plant Growth ===")
     rose.show()
-    for i in range(1, 7):
+    for i in range(1, 8):
         print(f"=== Day {i} ===")
         rose.pass_one_day()
         rose.show()
