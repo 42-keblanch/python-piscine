@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-def ft_garden_intro():
+def ft_garden_intro() -> None:
     name: str = "Leontopodium nivale"
     height: int = 16
     age: int = 759
