@@ -33,7 +33,7 @@ class Plant:
 {self._nb_age} age, {self._nb_show} show")
 
     @classmethod
-    def anonymous_plant(cls):
+    def anonymous_plant(cls) -> 'Plant':
         return cls("Unknown plant", 0, 0)
 
     def get_height(self) -> float:
