@@ -35,25 +35,27 @@ def main(args: list[str]) -> None:
     lo_val: int = 0
     args.pop(0)
     invt: dict[str, int] = parse_inventory(args)
-    invt_keys: list[str] = list(invt.keys())
 
-    print(f"Got inventory: {invt}")
-    print(f"Item list: {invt_keys}")
-    print(f"total quantity of the {len(invt.keys())}\
- items: {sum(invt.values())}")
+    if not invt:
+        print("Inventory is empty!")
+    else:
+        print(f"Got inventory: {invt}")
+        print(f"Item list: {list(invt.keys())}")
+        print(f"total quantity of the {len(invt.keys())}\
+    items: {sum(invt.values())}")
 
-    for key in invt_keys:
-        if invt[key] > hi_val:
-            hi_val = invt[key]
-            hi_key = key
-        if lo_val == 0 or invt[key] < lo_val:
-            lo_val = invt[key]
-            lo_key = key
-        print(f"Item {key} represents\
+        for key in invt:
+            if invt[key] > hi_val:
+                hi_val = invt[key]
+                hi_key = key
+            if lo_val == 0 or invt[key] < lo_val:
+                lo_val = invt[key]
+                lo_key = key
+            print(f"Item {key} represents\
  {(invt[key] * 100 / sum(invt.values())):.1f}%")
 
-    print(f"Item most aboundant: {hi_key} with quantity {hi_val}")
-    print(f"Item least aboundant: {lo_key} with quantity {lo_val}")
+        print(f"Item most aboundant: {hi_key} with quantity {hi_val}")
+        print(f"Item least aboundant: {lo_key} with quantity {lo_val}")
 
     invt.update({"magic_item": 1})
     print(f"Updated inventory: {invt}")
