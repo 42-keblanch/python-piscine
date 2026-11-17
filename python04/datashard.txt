@@ -1,0 +1,3 @@
+[LOG 20871116170328] Started my journey as a data archivist
+[LOG 20871116170419] Created my first datashard containing logs
+[LOG 20871116170450] Read my first datashard (this one)
